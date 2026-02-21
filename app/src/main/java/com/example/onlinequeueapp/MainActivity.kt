@@ -1,5 +1,6 @@
 package com.example.onlinequeueapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,6 +20,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -38,6 +40,8 @@ fun MainMenu() {
     val nameState = remember { mutableStateOf("") }
     val questionState = remember { mutableStateOf("") }
     val isShowNameFieldError = remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
 
     Column(
         modifier = Modifier
@@ -65,6 +69,10 @@ fun MainMenu() {
                     isShowNameFieldError.value = true
                     return@Button;
                 }
+
+                val contactIntent = Intent(context, ContactActivity::class.java)
+                contactIntent.putExtra("name", nameState.value)
+                context.startActivity(contactIntent)
             },
             modifier = Modifier
                 .fillMaxWidth()

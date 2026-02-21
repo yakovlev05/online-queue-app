@@ -3,4 +3,6 @@
     <string name="text_field_name_placeholder">Введите имя*</string>
     <string name="text_field_question_placeholder">Вопрос</string>
     <string name="button_text">Отправить</string>
+    <string name="text_result">Отлично, %s! Мы вам перезвоним.</string>
+    <string name="text_phone">+7 902 264 25 52</string>
 </resources>

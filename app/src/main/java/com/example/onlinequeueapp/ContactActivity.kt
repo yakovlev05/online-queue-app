@@ -58,7 +58,7 @@ fun MainContactMenu(name: String?) {
         )
 
         Text(
-            text = stringResource(R.string.text_result, name.let { "Who is you?" })
+            text = stringResource(R.string.text_result, name ?: "Who is you?")
         )
 
         Text(

@@ -5,4 +5,5 @@
     <string name="button_text">Отправить</string>
     <string name="text_result">Отлично, %s! Мы вам перезвоним.</string>
     <string name="text_phone">+7 902 264 25 52</string>
+    <string name="text_field_required">Обязательно для заполнения</string>
 </resources>

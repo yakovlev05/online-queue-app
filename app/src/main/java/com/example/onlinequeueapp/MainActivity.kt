@@ -100,7 +100,7 @@ fun RequiredTextField(state: MutableState<String>, isShowErrorState: MutableStat
 
     if (isShowErrorState.value) {
         Text(
-            stringResource(R.string.button_text),
+            stringResource(R.string.text_field_required),
             color = Color.Red,
             modifier = Modifier.padding(start = 16.dp)
         )
